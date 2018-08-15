@@ -6,6 +6,7 @@ mv slscp_problem-master venv/
 - activate the virtualenv and install the required packages
 source venv/bin/activate
 pip install -r requirements.txt
+cd venv/slscp_problem-master/
 
 To run the slcsp calculation code:
 python slcsp_calc.py
