@@ -1,0 +1,6 @@
+To run the slcsp code with the input files provided in the adhoc github repo:
+- with python3.6.5, pip install pandas 0.23.4 and pytest 3.7.1. Alternately, pip install -r requirements.txt
+- python slcsp_calc.py 
+
+To run the tests:
+- pytest --verbose
