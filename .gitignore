@@ -1,0 +1,4 @@
+.DS_Store
+*.todo
+*.ipynb
+.ipynb_checkpoints
