@@ -56,7 +56,8 @@ def calculate_slcsp(zipfile, planfile, slcspfile):
 def get_slcsp(group):
     """
     Calculate the second lowest cost rate given a group of rates
-    If only 1 rate value is in the group the slc will be None
+    If only 1 rate value is in the group or all rates are the same
+    the slc will be None
     :param group: group of numeric values
     returns numeric second lowest cost rate in the group
     """
