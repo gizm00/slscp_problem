@@ -40,22 +40,22 @@ def test_no_silver_plans():
     assert df_result.iloc[[0]]['rate'][0] == None
     
 def test_one_rate():
-    # if only 1 rate is available this will be returned as the slcsp
+    # if only 1 rate is available return None
     df_result = calculate_slcsp(
     'testfiles/single_rate_area_zips.csv',
     'testfiles/one_silver_plan_rate.csv',
     'testfiles/single_slcsp.csv'
     )
-    assert df_result.iloc[[0]]['rate'][0] == 560
+    assert df_result.iloc[[0]]['rate'][0] == None
     
 def test_all_same_rate():
-    # if all plans have the same rate then return that rate
+    # if all plans have the same rate then return None
     df_result = calculate_slcsp(
     'testfiles/single_rate_area_zips.csv',
     'testfiles/silver_plan_same_rates.csv',
     'testfiles/single_slcsp.csv'
     )
-    assert df_result.iloc[[0]]['rate'][0] == 560
+    assert df_result.iloc[[0]]['rate'][0] == None
     
 def test_slcsp_calculation():
     # provided various rates for a given silver plan return the

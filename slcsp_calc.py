@@ -56,18 +56,15 @@ def calculate_slcsp(zipfile, planfile, slcspfile):
 def get_slcsp(group):
     """
     Calculate the second lowest cost rate given a group of rates
-    If only 1 rate value is in the group that value will be returned
-    as the second lowest cost rate
+    If only 1 rate value is in the group the slc will be None
     :param group: group of numeric values
     returns numeric second lowest cost rate in the group
     """
     sorted_group = group.sort_values(ascending=True)
     min_rate = sorted_group.values[0]
+    slc = None
     i=0
-    # this initialization means that if there is only 1 rate value
-    # then that will be identified as the slc rate
-    slc=min_rate
-    while slc == min_rate and i < len(sorted_group):
+    while slc == None and i < len(sorted_group):
         if sorted_group.values[i] is not None:
             if sorted_group.values[i] > min_rate:
                 slc = sorted_group.values[i] 
