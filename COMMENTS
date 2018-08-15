@@ -1,6 +1,16 @@
 To run the slcsp code with the input files provided in the adhoc github repo:
-- with python3.6.5, pip install pandas 0.23.4 and pytest 3.7.1. Alternately, pip install -r requirements.txt
-- python slcsp_calc.py 
+- create a virtualenv using python 3.6.0-3.6.5 and move the zip directory into it:
+virtualenv -p python3 venv
+mv slscp_problem-master venv/
+
+- activate the virtualenv and install the required packages
+source venv/bin/activate
+pip install -r requirements.txt
+
+To run the slcsp calculation code:
+python slcsp_calc.py
+
+output slcsp.zip file in the working directory will have the annotated slcsp rates
 
 To run the tests:
-- pytest --verbose
+pytest --verbose
